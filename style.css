@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Outfit", serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: var(--white);
+}
+
+/* colors*/
+:root {
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+}
+
+.attribution {
+    font-size: 14px;
+    text-align: center;
+    color: var(--stone-600);
+    margin-top: -3%;
+}
+
+/* mobile design 375px */
+
+.head #omlete {
+    width: 100%;
+    height: auto;
+}
+
+.text-container {
+    padding: 5% 7%;
+}
+
+.head-text h1 {
+    margin-bottom: 15px;
+    color: var(--stone-900);
+}
+
+.preparation-time {
+    background-color: var(--rose-50);
+/*     padding: 30px; */
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 20%px;
+}
+
+.preparation-time h3 {
+    color: var(--rose-800);
+    margin-left: 20px;
+    padding-top: 15px;
+}
+
+.preparation-time ul {
+    padding: 15px 40px;
+}
+
+#plan h2 {
+    margin: 20px 0;
+    color: var(--brown-800);
+}
+
+.head-text h1, .ingredients h2, .instructions h2, .nutrition h2 {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+}
+
+p, li {
+    color: var(--stone-600);
+    margin-bottom: 8px;
+}
+
+#plan ul, ol {
+    padding: 0px 20px;
+}
+
+#underline {
+    border-bottom: 1px solid var(--stone-150);
+/*     margin: 30px 0; */
+    margin-top: 25px;
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+   padding: 5px;
+}
+td {
+    padding: 10px 30px;
+    color: var(--stone-600);
+}
+td span {
+    color: var(--brown-800);
+    font-weight: 700;
+}
+
+tr:not(:first-child):not(:last-child) {
+    border-bottom: 1px solid var(--stone-150);
+}
+
+/* Desktop design */
+@media (min-width: 800px) {
+    .main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .head {
+        width: 100%;
+        text-align: center;
+        margin-bottom: -20px;
+    }
+    .head #omlete {
+        width: 85%;
+        height: auto;
+        border-radius: 20px;
+    }
+}
