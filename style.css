@@ -1,14 +1,16 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@font-face {
+    font-family: outfit;
+    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
 }
 
-body {
-    font-family: "Outfit", serif;
-    font-weight: 400;
-    font-size: 16px;
-    background-color: var(--white);
+@font-face {
+    font-family: young-serif;
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 /* colors*/
@@ -23,112 +25,181 @@ body {
     --rose-50: hsl(330, 100%, 98%);
 }
 
-.attribution {
-    font-size: 14px;
-    text-align: center;
-    color: var(--stone-600);
-    margin-top: -3%;
+body {
+    background-color: var(--stone-100);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* mobile design 375px */
-
-.head #omlete {
-    width: 100%;
-    height: auto;
-}
-
-.text-container {
-    padding: 5% 7%;
-}
-
-.head-text h1 {
-    margin-bottom: 15px;
-    color: var(--stone-900);
-}
-
-.preparation-time {
-    background-color: var(--rose-50);
-/*     padding: 30px; */
-    border-radius: 5px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    height: 20%px;
-}
-
-.preparation-time h3 {
-    color: var(--rose-800);
-    margin-left: 20px;
-    padding-top: 15px;
-}
-
-.preparation-time ul {
-    padding: 15px 40px;
-}
-
-#plan h2 {
-    margin: 20px 0;
+h1, h2 {
+    font-family: young-serif;
+    font-weight: 400;
     color: var(--brown-800);
 }
 
-.head-text h1, .ingredients h2, .instructions h2, .nutrition h2 {
-    font-family: "Young Serif", serif;
+h3, p, li {
+    font-family: outfit;
     font-weight: 400;
-}
-
-p, li {
     color: var(--stone-600);
-    margin-bottom: 8px;
 }
 
-#plan ul, ol {
-    padding: 0px 20px;
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
+   
 }
 
-#underline {
-    border-bottom: 1px solid var(--stone-150);
-/*     margin: 30px 0; */
-    margin-top: 25px;
+main article {
+    box-sizing: border-box;
+    width: 46rem;
+    /* margin: clamp(0px, 1vw, 7.7rem); */
+    padding: 2.4rem;
+    background-color: var(--white);
+    border-radius: 1rem;
 }
 
-
-
-table {
+main article header img {
     width: 100%;
-    border-collapse: collapse;
+    border-radius: 1rem;
 }
-th {
-   padding: 5px;
+
+main article header h1 {
+    font-size: 2.5rem;
+    margin-top: 1.3rem;
+    color: var(--stone-900);
 }
-td {
-    padding: 10px 30px;
-    color: var(--stone-600);
+
+hr {
+    margin: 1.7rem 0rem;
+    /* border-color: var(--stone-150); */
+    border-top: 1px solid var(--stone-150);
 }
-td span {
+
+/* main article .ingredients, .instructions  {
+    border-bottom: 1px solid var(--stone-150); 
+} */
+
+.time {
+    background-color: var(--rose-50);
+    border-radius: 1rem;
+    height: auto;
+    line-height: 1.7rem;
+    margin: 1.8rem auto;
+}
+.time ul {
+    padding-left: 2.6rem;
+    padding-bottom: 1.6rem;
+    font-size: .9rem;
+}
+.time li {
+    padding-left: 1rem;
+}
+.time h3 {
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 0.5rem;
+    color: var(--rose-800);
+    font-weight: 700;
+}
+
+
+.ingredients {
+    line-height: 1.7rem;
+}
+.ingredients ul {
+    margin-left: 1.3rem;
+    margin-top: 0.7rem;
+}
+.ingredients li {
+    padding-left: 1rem;
+}
+
+
+.instructions ol {
+    margin-top: 0.7rem;
+    margin-left: 1.3rem;
+}
+.instructions li {
+    margin-bottom: .8rem;
+    padding-left: 1rem;
+}
+.instructions li::marker {
     color: var(--brown-800);
     font-weight: 700;
 }
 
-tr:not(:first-child):not(:last-child) {
+
+.nutrition table {
+    font-family: outfit;
+    color: var(--stone-600);
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.nutrition table tr td {
+    padding: 0.7rem 1.8rem;
+}
+.nutrition table tr td span {
+    color: var(--brown-800);
+    font-weight: 700;
+}
+.nutrition table tr:not(:last-child) {
     border-bottom: 1px solid var(--stone-150);
 }
+.nutrition p {
+    margin: 1rem 0rem;
+}
 
-/* Desktop design */
-@media (min-width: 800px) {
-    .main {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-    
-    .head {
+
+.attribution {
+    font-family: outfit;
+    font-size: .9rem;
+    text-align: center;
+    color: hsl(228, 45%, 44%);
+    margin-top: 3rem;
+}
+
+/* mobile desing */
+@media (max-width: 768px) {
+    main  {
         width: 100%;
-        text-align: center;
-        margin-bottom: -20px;
-    }
-    .head #omlete {
-        width: 85%;
         height: auto;
-        border-radius: 20px;
+        margin: 0 auto;
+        box-sizing: border-box;
     }
+
+    main article header p {
+        padding-left: 1.6rem;
+    }
+    main article header img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+    main article {
+        padding: 0;
+        padding-bottom: 2rem;
+    }
+    main article h1, section {
+        padding: 0rem 1.6rem;
+    }
+    main article .time {
+        width: 70%;
+    }
+
+    main article hr {
+        margin: 1.7rem 1.6rem;
+    }
+
+    main article .attribution {
+        font-family: outfit;
+        text-align: center;
+        margin: 1rem auto;
+        color: hsl(228, 45%, 44%);
+    }
+
 }
