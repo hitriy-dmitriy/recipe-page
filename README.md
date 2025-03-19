@@ -1,2 +1,2 @@
 # recipe-page
-Frontend mentro challange | Recipe Page
+Frontend mentor challange | Recipe Page
